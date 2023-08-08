@@ -9,4 +9,8 @@ class Editorial extends Model
 {
     use HasFactory;
     protected $table = 'editoriales';
+
+    // public function editorial(){
+    //     return $this->belongsToMany(Autor::class, 'autores_editorial','editorial_id','autor_id')
+    // }
 }

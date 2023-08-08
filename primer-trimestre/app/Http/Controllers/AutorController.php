@@ -21,4 +21,21 @@ view('autores.index',compact('autor'));
         $autor->save();
         return 'fin';
     }
+
+// para editar -----------------------------
+    public function edit(Autor $autor)
+    {
+        return view('autores.edit', compact('autor'));
+    }
+
+    public function update(Request $request, Autor $autor)
+    {
+       
+        $autor->name = $request->input('name');
+        $autor->pais = $request->input('pais');
+        $autor->save();
+        return 'fin';
+    }
+// ------------------------------------------
+
 }

@@ -24,3 +24,8 @@ Route::post('/autores', [AutorController::class,'store'])->name('autores.store')
 Route::get('/editoriales', [EditorialController::class,'index'])->name('editoriales.index');
 Route::get('/editoriales/create',[EditorialController::class,'create'])->name('editoriales.create');
 Route::post('/editoriales', [EditorialController::class,'store'])->name('editoriales.store');
+
+
+// para editaaar
+Route::get('/autores/edit/{autor}',[AutorController::class,'edit'])->name('autores.edit');
+Route::patch('/autores/{autor}', [AutorController::class,'update'])->name('autores.update');
