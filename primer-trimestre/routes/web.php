@@ -29,3 +29,6 @@ Route::post('/editoriales', [EditorialController::class,'store'])->name('editori
 // para editaaar
 Route::get('/autores/edit/{autor}',[AutorController::class,'edit'])->name('autores.edit');
 Route::patch('/autores/{autor}', [AutorController::class,'update'])->name('autores.update');
+
+//para borrar
+Route::delete('/autores/{autor}', [AutorController::class, 'delete'])->name('autores.delete');

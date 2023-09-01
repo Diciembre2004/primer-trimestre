@@ -16,6 +16,12 @@
 
     @include('layouts.navigation')
     @yield('content')
+
+
+    @if (session('status'))
+        <div> {{ session('status') }} </div>
+        <br>
+    @endif
     
 </body>
 </html>

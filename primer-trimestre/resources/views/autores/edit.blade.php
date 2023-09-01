@@ -9,16 +9,12 @@
     <form action="{{ route('autores.update', $autor) }}" method="POST">
         @csrf
         @method('PATCH')
-        <label>
-            Nombre <br>
-            <input name="name" type="text" value="{{ old('name', $autor->name) }}"> <br>
-        </label>
-        <label>
-            Pais <br>
-            <input name="pais" type="text" value="{{ old('pais', $autor->pais) }}"> <br>
-        </label>
-        <button type="submit">Grabar</button> <br>
+        @include('autores._partials.campos-form')
+
     </form>
     <a href="{{ route('autores.index') }}">Regresar</a>
+
+
+
 
     @endsection

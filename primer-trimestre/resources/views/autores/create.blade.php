@@ -5,15 +5,7 @@
 
     <form action="{{route('autores.store')}}" method="POST"> {{--cambio create a store--}}
     @csrf
-    <label>
-        Nombre <br>
-        <input name="nombre" type="text"> <br>
-    </label>
-    {{-- <label>
-        DNI <br>
-        <input name="dni" type="text"> <br>
-    </label> --}}
-    <button type="submit">Grabar</button> <br>
+    @include('autores._partials.campos-form')
 </form>
 
     <a href="{{route('autores.index')}}">Regresar</a>

@@ -19,7 +19,7 @@ class AutorFactory extends Factory
         return [
             'name' => fake()->name(), 
             // 'cumpleaños' => fake()->date(),
-            // 'nacionalidad' => fake()->country(),
+            'country' => fake()->country(),
         ];
     }
 }
